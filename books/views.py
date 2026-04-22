@@ -4,6 +4,7 @@ from rest_framework.filters import SearchFilter, OrderingFilter
 
 from .models import Book, Genre
 from .serializers import BookSerializer, GenreSerializer
+from .permissions import IsOwnerOrReadOnly
 
 # Create your views here.
 class BookListCreateView(generics.ListCreateAPIView):
@@ -24,7 +25,7 @@ class BookListCreateView(generics.ListCreateAPIView):
 class BookDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Book.objects.all()
     serializer_class = BookSerializer
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly, IsOwnerOrReadOnly]
 
 
 class MyBooksView(generics.ListAPIView):
