@@ -10,14 +10,20 @@ import { MyBooks } from './pages/MyBooks';
 import { BookForm } from './pages/BookForm';
 import { Dashboard } from './pages/Dashboard';
 import { Profile } from './pages/Profile';
+import { PublicProfile } from './pages/PublicProfile';
 
-// A wrapper for protected routes
 const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
   const { isAuthenticated, isLoading } = useAuth();
-  
-  if (isLoading) return <div className="min-h-screen flex items-center justify-center">Loading...</div>;
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="animate-spin w-8 h-8 border-4 border-indigo-600 border-t-transparent rounded-full"></div>
+      </div>
+    );
+  }
   if (!isAuthenticated) return <Navigate to="/login" replace />;
-  
+
   return <>{children}</>;
 };
 
@@ -32,14 +38,14 @@ function App() {
             <Route path="register" element={<Register />} />
             <Route path="browse" element={<BrowseBooks />} />
             <Route path="books/:id" element={<BookDetail />} />
-            
+            <Route path="user/:username" element={<PublicProfile />} />
+
             {/* Protected Routes */}
             <Route path="my-books" element={<ProtectedRoute><MyBooks /></ProtectedRoute>} />
             <Route path="books/add" element={<ProtectedRoute><BookForm /></ProtectedRoute>} />
             <Route path="books/:id/edit" element={<ProtectedRoute><BookForm /></ProtectedRoute>} />
             <Route path="dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
             <Route path="profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
-            {/* We will add more routes here in the next steps */}
           </Route>
         </Routes>
       </Router>
@@ -48,4 +54,3 @@ function App() {
 }
 
 export default App;
-

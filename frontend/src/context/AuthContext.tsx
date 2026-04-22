@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import { createContext, useContext, useState, useEffect } from 'react';
 import type { ReactNode } from 'react';
 import { api } from '../api/axios';
@@ -44,7 +45,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     try {
       const res = await api.get('/api/auth/me/');
       setUser(res.data);
-    } catch (error) {
+    } catch {
       logout();
     }
   };
@@ -56,7 +57,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         try {
           const res = await api.get('/api/auth/me/');
           setUser(res.data);
-        } catch (error) {
+        } catch {
           // The interceptor will handle token refresh if 401
           // If it completely fails, user will remain null (logged out)
         }
