@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 antialiased;
+  }
+}
+
+@layer utilities {
+  .book-card-tilt {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .book-card-tilt:hover {
+    transform: perspective(1000px) rotateY(-5deg) rotateX(5deg) scale(1.02);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.15), -5px -5px 10px rgba(255, 255, 255, 0.5);
+  }
+}
