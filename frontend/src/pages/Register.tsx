@@ -59,7 +59,7 @@ export const Register = () => {
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
           <div className="space-y-4">
             <div>
-              <label-[deleted] htmlFor="username" className="block text-sm font-medium text-slate-700">Username *</label-[deleted]>
+              <label htmlFor="username" className="block text-sm font-medium text-slate-700">Username *</label>
               <input
                 id="username" name="username" type="text" required
                 className="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-emerald-500 focus:border-emerald-500 sm:text-sm"
@@ -67,7 +67,7 @@ export const Register = () => {
               />
             </div>
             <div>
-              <label-[deleted] htmlFor="email" className="block text-sm font-medium text-slate-700">Email address *</label-[deleted]>
+              <label htmlFor="email" className="block text-sm font-medium text-slate-700">Email address *</label>
               <input
                 id="email" name="email" type="email" required
                 className="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-emerald-500 focus:border-emerald-500 sm:text-sm"
@@ -75,7 +75,7 @@ export const Register = () => {
               />
             </div>
             <div>
-              <label-[deleted] htmlFor="password" className="block text-sm font-medium text-slate-700">Password *</label-[deleted]>
+              <label htmlFor="password" className="block text-sm font-medium text-slate-700">Password *</label>
               <input
                 id="password" name="password" type="password" required
                 className="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-emerald-500 focus:border-emerald-500 sm:text-sm"
@@ -83,7 +83,7 @@ export const Register = () => {
               />
             </div>
             <div>
-              <label-[deleted] htmlFor="city" className="block text-sm font-medium text-slate-700">City</label-[deleted]>
+              <label htmlFor="city" className="block text-sm font-medium text-slate-700">City</label>
               <input
                 id="city" name="city" type="text"
                 className="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-emerald-500 focus:border-emerald-500 sm:text-sm"
@@ -109,3 +109,4 @@ export const Register = () => {
     </div>
   );
 };
+

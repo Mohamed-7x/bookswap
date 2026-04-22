@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { api } from '../api/axios';
 import { useAuth } from '../context/AuthContext';
-import { Book } from '../components/BookCard';
-import { BookOpen, User, Calendar, Edit, Trash2, ArrowLeft, RefreshCw } from 'lucide-react';
+import type { Book } from '../components/BookCard';
+import { BookOpen, User, Edit, Trash2, ArrowLeft, RefreshCw } from 'lucide-react';
 import toast from 'react-hot-toast';
 
 export const BookDetail = () => {
@@ -138,3 +138,4 @@ export const BookDetail = () => {
     </div>
   );
 };
+

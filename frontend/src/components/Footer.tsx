@@ -1,5 +1,4 @@
-import { ReactNode } from 'react';
-import { BookOpen, Github } from 'lucide-react';
+import { BookOpen } from 'lucide-react';
 
 export const Footer = () => {
   return (
@@ -17,7 +16,7 @@ export const Footer = () => {
           
           <div className="flex items-center gap-4">
             <a href="#" className="hover:text-emerald-400 transition-colors">
-              <Github size={20} />
+              GitHub
             </a>
           </div>
         </div>
@@ -25,3 +24,4 @@ export const Footer = () => {
     </footer>
   );
 };
+

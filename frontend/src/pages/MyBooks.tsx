@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { api } from '../api/axios';
-import { BookCard, Book } from '../components/BookCard';
+import { BookCard } from '../components/BookCard';
+import type { Book } from '../components/BookCard';
 import { BookOpen, Plus } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import toast from 'react-hot-toast';
@@ -67,3 +68,4 @@ export const MyBooks = () => {
     </div>
   );
 };
+

@@ -56,7 +56,7 @@ export const Login = () => {
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
           <div className="space-y-4">
             <div>
-              <label-[deleted] htmlFor="username" className="block text-sm font-medium text-slate-700">Username</label-[deleted]>
+              <label htmlFor="username" className="block text-sm font-medium text-slate-700">Username</label>
               <input
                 id="username"
                 name="username"
@@ -69,7 +69,7 @@ export const Login = () => {
               />
             </div>
             <div>
-              <label-[deleted] htmlFor="password" className="block text-sm font-medium text-slate-700">Password</label-[deleted]>
+              <label htmlFor="password" className="block text-sm font-medium text-slate-700">Password</label>
               <input
                 id="password"
                 name="password"
@@ -100,3 +100,4 @@ export const Login = () => {
     </div>
   );
 };
+

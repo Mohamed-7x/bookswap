@@ -69,3 +69,4 @@ export const BookCard = ({ book }: { book: Book }) => {
     </Link>
   );
 };
+

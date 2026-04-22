@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { api } from '../api/axios';
 import { useAuth } from '../context/AuthContext';
-import { User as UserIcon, Star, MapPin, Calendar, BookOpen } from 'lucide-react';
+import { User as UserIcon, Star, MapPin } from 'lucide-react';
 import toast from 'react-hot-toast';
 
 interface Review {
@@ -117,3 +117,4 @@ export const Profile = () => {
     </div>
   );
 };
+

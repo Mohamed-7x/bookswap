@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { api } from '../api/axios';
-import { BookCard, Book } from '../components/BookCard';
-import { Search, Filter } from 'lucide-react';
+import { BookCard } from '../components/BookCard';
+import type { Book } from '../components/BookCard';
+import { Search, Filter, BookOpen } from 'lucide-react';
 import toast from 'react-hot-toast';
 
 export const BrowseBooks = () => {
@@ -99,3 +100,4 @@ export const BrowseBooks = () => {
     </div>
   );
 };
+

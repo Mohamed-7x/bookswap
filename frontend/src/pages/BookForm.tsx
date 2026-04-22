@@ -99,20 +99,20 @@ export const BookForm = () => {
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="col-span-2 md:col-span-1">
-              <label-[deleted] className="block text-sm font-medium text-slate-700 mb-1">Title *</label-[deleted]>
+              <label className="block text-sm font-medium text-slate-700 mb-1">Title *</label>
               <input type="text" name="title" required value={formData.title} onChange={handleChange} className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500" />
             </div>
             <div className="col-span-2 md:col-span-1">
-              <label-[deleted] className="block text-sm font-medium text-slate-700 mb-1">Author *</label-[deleted]>
+              <label className="block text-sm font-medium text-slate-700 mb-1">Author *</label>
               <input type="text" name="author" required value={formData.author} onChange={handleChange} className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500" />
             </div>
             
             <div>
-              <label-[deleted] className="block text-sm font-medium text-slate-700 mb-1">ISBN</label-[deleted]>
+              <label className="block text-sm font-medium text-slate-700 mb-1">ISBN</label>
               <input type="text" name="isbn" value={formData.isbn} onChange={handleChange} className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500" />
             </div>
             <div>
-              <label-[deleted] className="block text-sm font-medium text-slate-700 mb-1">Genre</label-[deleted]>
+              <label className="block text-sm font-medium text-slate-700 mb-1">Genre</label>
               <select name="genre" value={formData.genre} onChange={handleChange} className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 bg-white">
                 <option value="">Select Genre</option>
                 {genres.map(g => <option key={g.id} value={g.id}>{g.name}</option>)}
@@ -120,7 +120,7 @@ export const BookForm = () => {
             </div>
 
             <div>
-              <label-[deleted] className="block text-sm font-medium text-slate-700 mb-1">Condition *</label-[deleted]>
+              <label className="block text-sm font-medium text-slate-700 mb-1">Condition *</label>
               <select name="condition" required value={formData.condition} onChange={handleChange} className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 bg-white">
                 <option value="new">New</option>
                 <option value="like_new">Like New</option>
@@ -130,7 +130,7 @@ export const BookForm = () => {
               </select>
             </div>
             <div>
-              <label-[deleted] className="block text-sm font-medium text-slate-700 mb-1">Exchange Type *</label-[deleted]>
+              <label className="block text-sm font-medium text-slate-700 mb-1">Exchange Type *</label>
               <select name="exchange_type" required value={formData.exchange_type} onChange={handleChange} className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 bg-white">
                 <option value="exchange">Exchange</option>
                 <option value="donate">Donate</option>
@@ -140,13 +140,13 @@ export const BookForm = () => {
           </div>
 
           <div>
-            <label-[deleted] className="block text-sm font-medium text-slate-700 mb-1">Description</label-[deleted]>
+            <label className="block text-sm font-medium text-slate-700 mb-1">Description</label>
             <textarea name="description" rows={4} value={formData.description} onChange={handleChange} className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500"></textarea>
           </div>
 
           <div className="flex items-center">
             <input type="checkbox" id="is_available" name="is_available" checked={formData.is_available} onChange={handleChange} className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-slate-300 rounded" />
-            <label-[deleted] htmlFor="is_available" className="ml-2 block text-sm text-slate-900">Available for exchange</label-[deleted]>
+            <label htmlFor="is_available" className="ml-2 block text-sm text-slate-900">Available for exchange</label>
           </div>
 
           <div className="pt-6 flex justify-end gap-4 border-t border-slate-100">
@@ -162,3 +162,4 @@ export const BookForm = () => {
     </div>
   );
 };
+

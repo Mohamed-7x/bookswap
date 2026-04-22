@@ -185,7 +185,7 @@ export const Dashboard = () => {
             <h3 className="text-xl font-bold text-slate-900 mb-4">Leave a Review</h3>
             <div className="space-y-4">
               <div>
-                <label-[deleted] className="block text-sm font-medium text-slate-700 mb-1">Rating</label-[deleted]>
+                <label className="block text-sm font-medium text-slate-700 mb-1">Rating</label>
                 <div className="flex gap-2">
                   {[1, 2, 3, 4, 5].map(star => (
                     <button key={star} onClick={() => setReviewRating(star)} className="focus:outline-none">
@@ -195,7 +195,7 @@ export const Dashboard = () => {
                 </div>
               </div>
               <div>
-                <label-[deleted] className="block text-sm font-medium text-slate-700 mb-1">Comment</label-[deleted]>
+                <label className="block text-sm font-medium text-slate-700 mb-1">Comment</label>
                 <textarea 
                   rows={4} 
                   className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500"
@@ -219,3 +219,4 @@ export const Dashboard = () => {
     </div>
   );
 };
+
