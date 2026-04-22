@@ -4,6 +4,10 @@ import { MainLayout } from './layouts/MainLayout';
 import { Landing } from './pages/Landing';
 import { Login } from './pages/Login';
 import { Register } from './pages/Register';
+import { BrowseBooks } from './pages/BrowseBooks';
+import { BookDetail } from './pages/BookDetail';
+import { MyBooks } from './pages/MyBooks';
+import { BookForm } from './pages/BookForm';
 
 // A wrapper for protected routes
 const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
@@ -24,6 +28,13 @@ function App() {
             <Route index element={<Landing />} />
             <Route path="login" element={<Login />} />
             <Route path="register" element={<Register />} />
+            <Route path="browse" element={<BrowseBooks />} />
+            <Route path="books/:id" element={<BookDetail />} />
+            
+            {/* Protected Routes */}
+            <Route path="my-books" element={<ProtectedRoute><MyBooks /></ProtectedRoute>} />
+            <Route path="books/add" element={<ProtectedRoute><BookForm /></ProtectedRoute>} />
+            <Route path="books/:id/edit" element={<ProtectedRoute><BookForm /></ProtectedRoute>} />
             {/* We will add more routes here in the next steps */}
           </Route>
         </Routes>
